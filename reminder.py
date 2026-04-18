@@ -5,6 +5,7 @@ class Reminder:
     self.interval = interval
     self.running = False
   def is_valid_interval(self, minutes):
+    """This program returns the minutes that are grader than 0"""
     return isinstance(minutes, int) and minutes > 0
   def set_interval(self, minutes):
     if not self.is_valid_interval(minutes):
