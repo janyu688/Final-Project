@@ -18,4 +18,4 @@ Whether it to remind someone of the wellness check they should be doing at that 
 
 ## Author
 
-Jasmyn Anyu, Neeraja Yasam, Gurnake Chadha
+Jasmyn Anyu, Neeraja Yasam, Gurnake Chadha, Twinkle Rathod
