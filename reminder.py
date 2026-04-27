@@ -11,4 +11,6 @@ class Reminder:
     if not self.is_valid_interval(minutes):
       raise ValueError("Invalid interval")
     self.interval = minutes
+  def load_interval(self):
+    
     
