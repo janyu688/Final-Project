@@ -11,6 +11,16 @@ class Reminder:
     if not self.is_valid_interval(minutes):
       raise ValueError("Invalid interval")
     self.interval = minutes
-  def load_interval(self):
+  def load_interval(self, filename="interval.txt"):
+    try:
+      with open(filename, "r") as file:
+        minutes = int(file.read().strip())
+        if self.is_valid_interval(minutes):
+          self.interval = minutes
+        else:
+          raise ValueError
+except (FileNotFoundError, ValueError):
+        print("Error loading interval.")
+    
     
     
