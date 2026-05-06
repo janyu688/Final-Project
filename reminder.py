@@ -1,8 +1,9 @@
 class Reminder:
-  def __init__(self, message, interval):
-    """Initialize reminder with message and interval in minutes."""
-    self.message = message
+  def __init__(self, interval, manager, logger):
+    """Initialize reminder with manager and interval in minutes."""
+    self.manager = manager
     self.interval = interval
+    self.logger = logger
     self.running = False
   def is_valid_interval(self, minutes):
     """This program returns the minutes that are grader than 0"""
@@ -19,7 +20,7 @@ class Reminder:
           self.interval = minutes
         else:
           raise ValueError
-except (FileNotFoundError, ValueError):
+    except (FileNotFoundError, ValueError):
         print("Error loading interval.")
     
     

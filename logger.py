@@ -1,5 +1,6 @@
 from datetime import datetime
 
+#Create the logger class to helo the user track their goals/ needs
 class Logger:
     def __init__(self, filename="mindfulness_log.txt"):
         self.filename = filename
