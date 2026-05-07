@@ -4,7 +4,7 @@ class ExerciseManager:
     Stores/ manages mindfulness exercises.
     has customization and random selection.
     """
-
+# Create the stings of exercises the program will ask for
     def __init__(self):
         self.exercises = [
             "Take 3 deep breaths",
