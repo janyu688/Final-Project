@@ -4,9 +4,7 @@ from logger import Logger
 from reminder import Reminder
 
 def main(page: ft.Page):
-    # -------------------------------
-    # PAGE SETTINGS
-    # -------------------------------
+    # Settings
     page.title = "Exercise Reminder App"
     page.theme_mode = "light"
     page.padding = 20
@@ -17,16 +15,12 @@ def main(page: ft.Page):
         colors=["#E3F2FD", "#FFFFFF"]
     )
 
-    # -------------------------------
-    # CORE OBJECTS
-    # -------------------------------
+    # Obj
     manager = ExerciseManager()
     logger = Logger()
     reminder = Reminder(5, manager, logger)
 
-    # -------------------------------
-    # INPUT + OUTPUT FIELDS
-    # -------------------------------
+    # Input/ Output
     interval_field = ft.TextField(
         label="Reminder interval (minutes)",
         value=str(reminder.interval),
@@ -35,9 +29,7 @@ def main(page: ft.Page):
 
     output_text = ft.Text(value="", selectable=True)
 
-    # -------------------------------
-    # FUNCTIONS
-    # -------------------------------
+    # Functions
     def set_interval(e):
         try:
             minutes = int(interval_field.value)
@@ -58,18 +50,14 @@ def main(page: ft.Page):
         output_text.value = f"Logged exercise: {exercise}"
         page.update()
 
-    # -------------------------------
-    # APP BAR (NO ICONS)
-    # -------------------------------
+    # App bar
     page.appbar = ft.AppBar(
         title=ft.Text("Exercise Reminder"),
         bgcolor="#2196F3",
         color="white"
     )
 
-    # -------------------------------
-    # BUTTONS (REPLACES FAB)
-    # -------------------------------
+    # Buttons
     get_exercise_top_button = ft.ElevatedButton(
         content=ft.Text("Get Exercise", size=16, weight=ft.FontWeight.BOLD),
         bgcolor="#FF4081",
@@ -103,9 +91,7 @@ def main(page: ft.Page):
         on_click=log_exercise
     )
 
-    # -------------------------------
-    # MAIN CARD LAYOUT
-    # -------------------------------
+    # main
     main_card = ft.Container(
         content=ft.Column(
             controls=[
