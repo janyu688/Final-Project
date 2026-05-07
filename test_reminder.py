@@ -4,7 +4,6 @@ from exercise_manager import ExerciseManager
 from logger import Logger
 
 class TestReminder(unittest.TestCase):
-
     def test_initial_interval(self):
         manager = ExerciseManager()
         logger = Logger()
